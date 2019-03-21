@@ -23,9 +23,10 @@ while speakers.length > 0
  return assigned_rooms
 end
 
-def printer
-  badges = batch_badge_creator
-  rooms = assign_rooms
+def printer (attendees)
+  badges = batch_badge_creator (attendees)
+  rooms = assign_rooms (attendees)
+ 
   badges.each do |x|
     puts x
   end
@@ -34,3 +35,4 @@ def printer
   end
   
 end
+binding.pry
